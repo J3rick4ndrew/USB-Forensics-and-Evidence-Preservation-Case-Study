@@ -1,0 +1,48 @@
+======================================================================
+DIGITAL FORENSICS CHAIN OF CUSTODY & CRYPTOGRAPHIC VERIFICATION LOG
+======================================================================
+Case Title:     USB Forensics and Evidence Preservation Case Study
+Examiner:       Jerick Andrew S (J3rick4ndrew)
+Acquisition OS: Windows 11 Host Endpoint
+Analysis OS:    Debian GNU/Linux (VirtualBox Forensic Workstation)
+Acquisition By: PassMark ImageUSB v1.5 Build 1007
+Log Timestamp:  10/27/2026 21:59:20
+
+----------------------------------------------------------------------
+1. SUSPECT HARDWARE IDENTIFICATION
+----------------------------------------------------------------------
+Primary Imaged Device:  VendorCo ProductCode (8 GB USB Flash Drive)
+Hardware Serial Number: 6909231174279079064
+Partition Table Type:   MBR / DOS Partition Table (7.51 GB)
+File System Type:       NTFS (0x07)
+
+Additional USB Artifact Identified on Host (Registry & SetupAPI):
+Device Description:     SanDisk Cruzer Blade (Rev 1.00)
+Hardware Serial Number: 03024420081823154155
+
+----------------------------------------------------------------------
+2. ACQUISITION & CRYPTOGRAPHIC HASH VERIFICATION
+----------------------------------------------------------------------
+Forensic Image File:    usb_forensic_image.bin
+Acquisition Start:      22:02:17
+Verification Start:     22:08:41
+Verification End:       22:09:27 (Avg Throughput: 20.0 MB/sec)
+
+MD5 (Physical Drive):   47277C6689E9E24999F5C8C76481511E
+MD5 (Forensic Image):   47277C6689E9E24999F5C8C76481511E [MATCHED]
+
+SHA-1 (Physical Drive): 2602131E3BCB447D877D9ABB1F0906C12BEECD32
+SHA-1 (Forensic Image): 2602131E3BCB447D877D9ABB1F0906C12BEECD32 [MATCHED]
+
+SHA-256 (Debian Verification of usb_forensic_image.bin):
+3b63151ea9492c20cb1960c12dc2231e6ef43e170d230e8e4e675df32d6907ae
+
+----------------------------------------------------------------------
+3. RECOVERED EVIDENCE ARTIFACT VERIFICATION
+----------------------------------------------------------------------
+Original Deleted File:  Confidential_Client_Data.txt.txt
+Carved Output File:     Recovered_Confidential_Client_Data.txt
+Partition Sector Offset: 2049 (Sector 2048 + 1-sector ImageUSB header)
+NTFS MFT / Inode Entry: 39-128-1 (Flagged as Deleted '*')
+Recovered File SHA-256: 51dd1acc2bf5cfec9e58d75401ba2633917eb608447e2603d1cbc8a85e3e230f
+======================================================================
